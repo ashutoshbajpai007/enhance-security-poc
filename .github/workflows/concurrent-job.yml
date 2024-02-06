@@ -9,7 +9,8 @@ on:
         required: true
         
 concurrency:
-  group: '${{ github.workflow }} @ ${{ github.event.pull_request.head.label || github.head_ref || github.ref }}'
+  #group: '${{ github.workflow }} @ ${{ github.event.pull_request.head.label || github.head_ref || github.ref }}'
+  group: 'test-concurrency'
   cancel-in-progress: true
 
 jobs:
