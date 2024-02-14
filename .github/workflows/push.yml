@@ -1,8 +1,16 @@
 name: Node.js CI
 
 on:
-  push:
-    branches: [development]
+  workflow_dispatch:
+    inputs:
+      CHECK:
+        description: 'Invoke Job' 
+        type: string
+        required: true
+        
+# on:
+#   push:
+#     branches: [development]
 
 # on:
 #   issues:
